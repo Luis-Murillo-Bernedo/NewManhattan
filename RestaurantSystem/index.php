@@ -24,7 +24,7 @@
 
         include("conexion.php");
 
-        $sql = "INSERT INTO platos(nombre,email) VALUES('".$nombre."', '".$precio."', '".$contenido."')";
+        $sql = "INSERT INTO platos(nombre,precio,contenido) VALUES('".$nombre."', '".$precio."', '".$contenido."')";
 
         $result2 = mysqli_query($conn, $sql);
 
@@ -80,7 +80,6 @@
                     <td> <?php echo $filas['nombre'] ?></td>
                     <td> <?php echo $filas['precio'] ?></td>
                     <td> <?php echo $filas['contenido'] ?></td>
-                    <td> <?php echo $filas['email'] ?></td>
                     <td>
                         <?php echo "<a id='link1' href='editar.php?id=".$filas['id']."'>EDITAR</a>"; ?>
                         -
